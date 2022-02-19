@@ -16,6 +16,7 @@ login = bool()
 def hello(request):
     return render(request, 'hello.html')
 
+
 def action_page(request):
     username = request.POST.get('uname')
     pw = request.POST.get('psw')
@@ -31,6 +32,10 @@ def action_page(request):
         return render(request, 'notlign.html')
 
 
+def test(request):
+    return render(request,'test.html')
 
+def  index(request):
+    return render(request, 'index.html')
 
 

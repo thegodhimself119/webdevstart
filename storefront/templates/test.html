@@ -256,7 +256,7 @@ footer a {
 
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="register/">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -264,14 +264,15 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" name = "name" required />
-			<input type="email" placeholder="Email" name = "email" required />
-			<input type="password" placeholder="Password" name = "password" required />
+			<input type="text" placeholder="Name" name = "name"  />
+			<input type="password" placeholder="Enter passwword" name = "password1"  />
+			<input type="password" placeholder="Re-enter Password" name = "password2"  />
 			<button>Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="/logged" method="post">
+		<form action="action_page/" method="post">
+			{%csrf_token%}
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -279,10 +280,14 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" name = "regemail" required />
-			<input type="password" placeholder="Password" name = "regpw" required />
+			<input type="text" placeholder="Email" name = "logemail"/>
+			<input type="text" placeholder="Password" name = "logpw"/>
 			<a href="#">Forgot your password?</a>
+			<h6 style="color:red">{{message}}</h6>
 			<button>Sign In</button>
+			<div>
+				<h6></h6>
+			</div>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -294,7 +299,7 @@ footer a {
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>HMMM</h1>
-				<p>Welcome man</p>
+				<p>Welcome to Godex</p>
 				<button class="ghost" id="signUp">Sign Up</button>
 			</div>
 		</div>

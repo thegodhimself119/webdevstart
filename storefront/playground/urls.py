@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.hello),
-
-    path('action_page.php/', views.action_page),
+    path('temp/action_page/', views.action_page),
+    path('test/action_page/',views.action_page),
     path('test/', views.test),
-    path('temp/', views.index)
+    path('temp/', views.newtest),
+    path('test/register', views.register),
 ]
